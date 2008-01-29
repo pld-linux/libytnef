@@ -8,7 +8,7 @@ Group:		Libraries
 Source0:	http://dl.sourceforge.net/ytnef/%{name}-%{version}.tar.gz
 # Source0-md5:	6c44b955f33cf714c75a7bbe895cc352
 URL:		http://ytnef.sourceforge.net/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -70,8 +70,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog
+%doc ChangeLog
 %attr(755,root,root) %{_libdir}/libytnef.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libytnef.so.0
 
 %files devel
 %defattr(644,root,root,755)
