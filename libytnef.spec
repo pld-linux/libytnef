@@ -3,11 +3,12 @@ Summary:	C library for decoding application/ms-tnef e-mail attachments
 Summary(pl.UTF-8):	Biblioteka C do dekodowania załączników e-maili typu application/ms-tnef
 Name:		libytnef
 Version:	1.5
-Release:	2
-License:	GPL v2
+Release:	3
+License:	GPL v2+
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/ytnef/%{name}-%{version}.tar.gz
 # Source0-md5:	6c44b955f33cf714c75a7bbe895cc352
+Patch0:		%{name}-segv.patch
 URL:		http://ytnef.sourceforge.net/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -49,6 +50,7 @@ Statyczna biblioteka libytnef.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__libtoolize}
