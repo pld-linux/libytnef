@@ -1,3 +1,4 @@
+%include	/usr/lib/rpm/macros.perl
 Summary:	C library for decoding application/ms-tnef e-mail attachments
 Summary(pl.UTF-8):	Biblioteka C do dekodowania załączników e-maili typu application/ms-tnef
 Name:		libytnef
@@ -12,6 +13,7 @@ URL:		https://github.com/Yeraze/ytnef
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	libtool >= 2:2.2
+BuildRequires:	rpm-perlprov
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
