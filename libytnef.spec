@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.perl
 Summary:	C library for decoding application/ms-tnef e-mail attachments
 Summary(pl.UTF-8):	Biblioteka C do dekodowania załączników e-maili typu application/ms-tnef
 Name:		libytnef
